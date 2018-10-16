@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "946402124674",
+    "firebase_url": "https://peoplegroups-f5e83.firebaseio.com",
+    "project_id": "peoplegroups-f5e83",
+    "storage_bucket": "peoplegroups-f5e83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946402124674:android:62b1718ce13da3de",
+        "android_client_info": {
+          "package_name": "app.people.ua.peoplegroups"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946402124674-oka25dpc8hfp9hjndq9dtjn521bojv34.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.people.ua.peoplegroups",
+            "certificate_hash": "98f371b4130f10d7b7b0569b63a4622ef6b150b4"
+          }
+        },
+        {
+          "client_id": "946402124674-4a65rhiq84437g92i2tndf82od2tsepj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMoHA3I7UeX5RuD2MsLjKrFKSnBWydmXM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946402124674-4a65rhiq84437g92i2tndf82od2tsepj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
