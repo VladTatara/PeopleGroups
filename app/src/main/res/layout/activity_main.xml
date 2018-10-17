@@ -7,12 +7,15 @@
     android:orientation="vertical"
     tools:context=".Main">
 
-    <include
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/toolbar"
-        layout="@layout/bar_layout"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
         >
-    </include>
 
+    </android.support.v7.widget.Toolbar>
 
 
     

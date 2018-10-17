@@ -14,7 +14,12 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setTitle("PeopleGroups");
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("PeopleGroups");
+
+        mToolbar.setSubtitle("Username");
+
+
+
     }
 }
