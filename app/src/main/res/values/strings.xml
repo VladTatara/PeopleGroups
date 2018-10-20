@@ -18,5 +18,7 @@
     //MainActivity
     <string name="Text_on_main">Добро пожаловать!</string>
     <string name="Log_out">Выйти</string>
+    <string name="change_name">Изменить никнейм</string>
+
 
 </resources>
