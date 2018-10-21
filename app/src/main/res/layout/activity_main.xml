@@ -4,18 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     tools:context=".Main">
 
-    <android.support.v7.widget.Toolbar
+    <include
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
-        app:popupTheme="@style/MenuStyle">
+        layout="@layout/bar_layout"/>
 
-    </android.support.v7.widget.Toolbar>
 
 
 </RelativeLayout>
