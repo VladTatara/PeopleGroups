@@ -8,7 +8,8 @@
     </style>
 
     <style name="MenuStyle"
-        parent="Theme.AppCompat.Light">
+        parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@color/primary_dark</item>
+        <item name="android:textColorSecondary">@color/primary</item>
     </style>
 </resources>

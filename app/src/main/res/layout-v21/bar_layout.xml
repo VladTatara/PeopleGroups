@@ -2,11 +2,8 @@
 <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/toolbar"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/primary"
-    app:theme="@style/MenuStyle">
-
+    android:elevation="4dp">
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,5 +19,6 @@
         android:textStyle="bold"
         android:layout_marginStart="25dp"
         android:layout_marginLeft="25dp" />
+
 
 </android.support.v7.widget.Toolbar>
