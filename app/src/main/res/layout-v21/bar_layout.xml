@@ -7,14 +7,14 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text ="@string/username"
         android:id="@+id/user_image"
         android:layout_marginLeft="25dp"
         android:layout_marginStart="25dp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/username"
+        android:id="@+id/username_on_main"
+        android:text="@string/username_on_main"
         android:textColor="@color/primary_dark"
         android:textStyle="bold"
         android:layout_marginStart="25dp"

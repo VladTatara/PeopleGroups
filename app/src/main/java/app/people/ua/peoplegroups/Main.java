@@ -25,9 +25,9 @@ public class Main extends AppCompatActivity {
     FirebaseUser firebaseUser;
     DatabaseReference reference;
     CircleImageView user_image;
-    TextView username;
+    TextView username_on_main;
 
-    private Toolbar mToolbar;
+    public Toolbar mToolbar;
 
 
 
@@ -36,6 +36,7 @@ public class Main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        username_on_main =(TextView)findViewById(R.id.username_on_main);
         //Toolbar.
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -48,7 +49,7 @@ public class Main extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 user_info user  = dataSnapshot.getValue(user_info.class);
-                username.setText(user.getUsername());
+                username_on_main.setText(user.getUsername());
                 if (user.getImageURL().equals("default")){
                     user_image.setImageResource(R.mipmap.ic_launcher);
                 }

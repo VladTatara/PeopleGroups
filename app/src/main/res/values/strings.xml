@@ -19,7 +19,7 @@
     <string name="Text_on_main">Добро пожаловать!</string>
     <string name="Log_out">Выйти</string>
     <string name="change_name">Изменить никнейм</string>
-    <string name="username">Никнейм</string>
+    <string name="username_on_main">Никнейм</string>
 
 
 </resources>

@@ -2,12 +2,12 @@ package app.people.ua.peoplegroups;
 
 public class user_info {
     private String id;
-    private String username;
+    private String username_on_main;
     private String imageURL;
 
     public user_info(String id, String username, String imageURL) {
         this.id = id;
-        this.username = username;
+        this.username_on_main = username;
         this.imageURL = imageURL;
     }
 
@@ -24,11 +24,11 @@ public class user_info {
     }
 
     public String getUsername() {
-        return username;
+        return username_on_main;
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.username_on_main = username;
     }
 
     public String getImageURL() {
