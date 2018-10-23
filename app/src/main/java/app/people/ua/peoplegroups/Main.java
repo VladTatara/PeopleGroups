@@ -27,7 +27,7 @@ public class Main extends AppCompatActivity {
     CircleImageView user_image;
     TextView username_on_main;
 
-    public Toolbar mToolbar;
+    public Toolbar toolbar;
 
 
 
@@ -38,8 +38,8 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         username_on_main =(TextView)findViewById(R.id.username_on_main);
         //Toolbar.
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         //Определяем по ID елементы.
         user_image = findViewById(R.id.user_image);
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -49,9 +49,10 @@ public class Main extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 user_info user  = dataSnapshot.getValue(user_info.class);
+
                 username_on_main.setText(user.getUsername());
                 if (user.getImageURL().equals("default")){
-                    user_image.setImageResource(R.mipmap.ic_launcher);
+                    user_image.setImageResource(R.drawable.iconmain);
                 }
                 else {
                     Glide.with(Main.this).load(user.getImageURL()).into(user_image);
