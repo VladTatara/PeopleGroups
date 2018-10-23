@@ -45,6 +45,7 @@ public class Main extends AppCompatActivity {
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
 
+
         reference.addValueEventListener(new ValueEventListener(){
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -52,7 +53,7 @@ public class Main extends AppCompatActivity {
 
                 username_on_main.setText(user.getUsername());
                 if (user.getImageURL().equals("default")){
-                    user_image.setImageResource(R.drawable.iconmain);
+                    user_image.setImageResource(R.drawable.icons_name);
                 }
                 else {
                     Glide.with(Main.this).load(user.getImageURL()).into(user_image);

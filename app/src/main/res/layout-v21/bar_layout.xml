@@ -4,12 +4,6 @@
     android:layout_height="wrap_content"
     android:background="@color/primary"
     android:elevation="4dp">
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/user_image"
-        android:layout_marginLeft="25dp"
-        android:layout_marginStart="25dp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

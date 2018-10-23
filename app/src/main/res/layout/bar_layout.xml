@@ -4,9 +4,26 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/primary"
-    android:minHeight="45dp"
+    android:background="@color/primary_dark"
+    android:minHeight="40dp"
     android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
     app:popupTheme="@style/MenuStyle">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@color/primary_dark" />
+
+    <TextView
+        android:id="@+id/username_on_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/username_on_main"
+        android:textColor="#fdfcfc"
+        android:textSize="18sp" />
 
 </android.support.v7.widget.Toolbar>

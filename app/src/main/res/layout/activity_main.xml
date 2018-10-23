@@ -6,40 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".Main">
 
-   <android.support.design.widget.AppBarLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
 
-       <android.support.v7.widget.Toolbar
-           android:id="@+id/toolbar"
-           android:background="@color/primary"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
-           app:popupTheme="@style/MenuStyle">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:minHeight="40dp">
 
-           <de.hdodenhof.circleimageview.CircleImageView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/user_image"
-               android:foregroundGravity="center_horizontal|center_vertical"
-               android:layout_marginLeft="25dp"
-               android:layout_marginStart="25dp" />
-
-           <TextView
-               android:id="@+id/username_on_main"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginLeft="25dp"
-               android:layout_marginStart="25dp"
-               android:text="@string/username_on_main"
-               android:textColor="@color/primary_dark"
-               android:textStyle="bold" />
-
-
-       </android.support.v7.widget.Toolbar>
-
-   </android.support.design.widget.AppBarLayout>
+    </include>
 
 
 </LinearLayout>
