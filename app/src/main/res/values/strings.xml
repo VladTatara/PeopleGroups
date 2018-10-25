@@ -15,11 +15,15 @@
     <string name="Email_on_login">Почта</string>
     <string name="Password_on_login">Пароль</string>
     <string name="Login_on_login">Войти</string>
+    <string name="reset_pass">Забыли пароль?</string>
     //MainActivity
     <string name="Text_on_main">Добро пожаловать!</string>
     <string name="Log_out">Выйти</string>
     <string name="change_name">Изменить никнейм</string>
     <string name="username_on_main">Никнейм</string>
+    //ResetPasswordActivity
+    <string name="email_for_reset">Ваша почта</string>
+    <string name="reset_but">Восстановить</string>
 
 
 </resources>

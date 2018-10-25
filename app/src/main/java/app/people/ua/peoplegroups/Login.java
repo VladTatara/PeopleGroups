@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,6 +20,7 @@ public class Login extends AppCompatActivity {
     EditText Email_on_login,Password_on_login;
     Button Login_on_login;
     FirebaseAuth auth;
+    TextView reset_pass;
 
 
 
@@ -32,6 +34,14 @@ public class Login extends AppCompatActivity {
         Email_on_login = (EditText)findViewById(R.id.Email_on_login);
         Password_on_login = (EditText)findViewById(R.id.Password_on_login);
         Login_on_login = (Button)findViewById(R.id.Login_on_login);
+        reset_pass = (TextView)findViewById(R.id.reset_pass);
+
+        reset_pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Login.this,ResetPassword.class));
+            }
+        });
 
         Login_on_login.setOnClickListener(new View.OnClickListener() {
             @Override

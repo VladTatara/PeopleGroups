@@ -54,4 +54,15 @@
         android:textAllCaps="false"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/reset_pass"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Login_on_login"
+        android:layout_marginStart="-21dp"
+        android:layout_toEndOf="@+id/Only_text_on_login"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/reset_pass"
+        android:textSize="16dp" />
 </RelativeLayout>
