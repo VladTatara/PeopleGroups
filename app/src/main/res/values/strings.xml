@@ -24,6 +24,8 @@
     //ResetPasswordActivity
     <string name="email_for_reset">Ваша почта</string>
     <string name="reset_but">Восстановить</string>
+    //SplashActivity
+    <string name="Wellcom_on_splash">Добро пожаловать</string>
 
 
 </resources>
