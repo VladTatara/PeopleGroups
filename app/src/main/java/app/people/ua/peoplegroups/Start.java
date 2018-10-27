@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,6 +24,7 @@ public class Start extends AppCompatActivity {
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         //Проверяем пользователя на наличие в базе!
         if (firebaseUser != null){
+            Toast.makeText(this, "Добро пожаловать!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(Start.this,Main.class);
             startActivity(intent);
             finish();

@@ -9,6 +9,8 @@
     android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
     app:popupTheme="@style/MenuStyle">
 
+
+
     <TextView
         android:id="@+id/username_on_main"
         android:layout_width="wrap_content"
