@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main">
+    tools:context=".Main"
+    tools:openDrawer="left">
 
     <include
         android:id="@+id/toolbar"
@@ -15,5 +18,16 @@
 
     </include>
 
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/primary_light"
+        app:itemIconTint="@color/primary_dark"
+        app:itemTextColor="@color/primary_dark"
+        app:menu="@menu/navigation_menu">
 
-</LinearLayout>
+    </android.support.design.widget.NavigationView>
+
+
+</RelativeLayout>

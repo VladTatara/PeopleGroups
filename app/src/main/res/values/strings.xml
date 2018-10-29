@@ -26,6 +26,8 @@
     <string name="reset_but">Восстановить</string>
     //SplashActivity
     <string name="Wellcom_on_splash">Добро пожаловать</string>
+    //DrawerLayout
+    <string name="Setup">Настройки</string>
 
 
 </resources>
