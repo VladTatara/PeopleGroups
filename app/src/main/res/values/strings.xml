@@ -25,7 +25,7 @@
     <string name="email_for_reset">Ваша почта</string>
     <string name="reset_but">Восстановить</string>
     //SplashActivity
-    <string name="Wellcom_on_splash">Добро пожаловать</string>
+    <string name="Wellcom_on_splash">PEOPLE_GROUPS</string>
     //DrawerLayout
     <string name="Setup">Настройки</string>
 
