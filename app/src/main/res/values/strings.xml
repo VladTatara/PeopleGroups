@@ -18,16 +18,17 @@
     <string name="reset_pass">Забыли пароль?</string>
     //MainActivity
     <string name="Text_on_main">Добро пожаловать!</string>
-    <string name="Log_out">Выйти</string>
-    <string name="change_name">Изменить никнейм</string>
     <string name="username_on_main">Никнейм</string>
     //ResetPasswordActivity
     <string name="email_for_reset">Ваша почта</string>
     <string name="reset_but">Восстановить</string>
     //SplashActivity
     <string name="Wellcom_on_splash">PEOPLE_GROUPS</string>
-    //DrawerLayout
+    //Navigation_menu
     <string name="Setup">Настройки</string>
+    <string name="change_name">Изменить никнейм</string>
+    //Option_menu
+    <string name="Log_out">Выйти</string>
 
 
 </resources>

@@ -73,7 +73,11 @@ public class Main extends AppCompatActivity {
                 startActivity(new Intent(Main.this,Login.class));
                 finish();
                 return true;
+            case R.id.Setup:
+
         }
+
+
         return false;
     }
 }
