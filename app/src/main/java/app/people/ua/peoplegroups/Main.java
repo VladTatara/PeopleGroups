@@ -3,6 +3,7 @@ package app.people.ua.peoplegroups;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -24,6 +25,8 @@ public class Main extends AppCompatActivity {
     TextView username_on_main;
 
     public Toolbar toolbar;
+    private NavigationView nav_main;
+
 
 
 
