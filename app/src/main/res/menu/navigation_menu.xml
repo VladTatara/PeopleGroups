@@ -13,6 +13,11 @@
         android:id="@+id/Setup"
         app:showAsAction="never">
     </item>
+    <item
+        android:title="@string/Upload_image"
+        android:id="@+id/Upload_image"
+        app:showAsAction="never">
+    </item>
 
 
 

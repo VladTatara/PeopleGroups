@@ -31,6 +31,7 @@ public class Main extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +41,7 @@ public class Main extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //Определяем по ID елементы.
+
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
 
@@ -73,7 +75,10 @@ public class Main extends AppCompatActivity {
                 startActivity(new Intent(Main.this,Start.class));
                 finish();
                 return true;
-            case R.id.Setup:
+            case R.id.Upload_image:
+                startActivity(new Intent(Main.this,Upload_image.class));
+                finish();
+                return true;
 
         }
 
