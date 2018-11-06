@@ -18,7 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:text="@string/enter_name_file"
-        android:layout_marginStart="14dp"/>
+        android:layout_marginStart="14dp"
+        android:hint="@string/enter_name_file"
+        android:inputType="text" />
 
 </RelativeLayout>
