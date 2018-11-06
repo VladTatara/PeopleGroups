@@ -18,7 +18,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Main extends AppCompatActivity {
+public class Main extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     FirebaseUser firebaseUser;
     DatabaseReference reference;
@@ -28,15 +28,15 @@ public class Main extends AppCompatActivity {
     private NavigationView nav_main;
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        username_on_main =(TextView)findViewById(R.id.username_on_main);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_main);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        username_on_main = (TextView) findViewById(R.id.username_on_main);
         //Toolbar.
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -46,10 +46,10 @@ public class Main extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
 
 
-        reference.addValueEventListener(new ValueEventListener(){
+        reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                user_info user  = dataSnapshot.getValue(user_info.class);
+                user_info user = dataSnapshot.getValue(user_info.class);
 
                 username_on_main.setText(user.getUsername());
             }
@@ -57,32 +57,37 @@ public class Main extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
             }
-            });
+        });
     }
 
-//Метод для определения меню в верхнем левом углу Toolbar.
+
+    //Метод для определения меню в верхнем левом углу Toolbar.
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.options_menu,menu);
+        getMenuInflater().inflate(R.menu.options_menu, menu);
         return true;
     }
-//Метод для обработки элементов меню.
+
+    //Метод для обработки элементов меню.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.Log_out:
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(Main.this,Start.class));
+                startActivity(new Intent(Main.this, Start.class));
                 finish();
                 return true;
-            case R.id.Upload_image:
-                startActivity(new Intent(Main.this,Upload_image.class));
-                finish();
-                return true;
-
         }
+        return false;
+    }
 
-
+    public boolean onNavigationItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.Upload_image) {
+            startActivity(new Intent(Main.this, Upload_image.class));
+            finish();
+            return true;
+        }
         return false;
     }
 }
