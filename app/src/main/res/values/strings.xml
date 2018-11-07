@@ -28,12 +28,12 @@
     <string name="Setup">Настройки</string>
     <string name="change_name">Изменить никнейм</string>
     <string name="Upload_image">Загрузить</string>
+    <string name="chat">Чат</string>
     //Option_menu
     <string name="Log_out">Выйти</string>
     //Upload_image
     <string name="choice_image">Выберете файл</string>
     <string name="enter_name_file">Введите название</string>
-
 
 
 </resources>

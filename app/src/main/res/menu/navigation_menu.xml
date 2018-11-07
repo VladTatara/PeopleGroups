@@ -14,11 +14,15 @@
         app:showAsAction="never">
     </item>
     <item
-        android:title="@string/Upload_image"
-        android:id="@+id/Upload_image"
+    android:title="@string/Upload_image"
+    android:id="@+id/Upload_image"
+    app:showAsAction="never">
+</item>
+    <item
+        android:title="@string/chat"
+        android:id="@+id/chat"
         app:showAsAction="never">
     </item>
-
 
 
 </menu>

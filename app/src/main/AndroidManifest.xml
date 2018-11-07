@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.people.ua.peoplegroups">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,17 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Start"></activity>
+        <activity android:name=".Start" />
         <activity
             android:name=".Register"
             android:parentActivityName=".Start" />
         <activity android:name=".Main" />
         <activity
             android:name=".Login"
-            android:parentActivityName=".Start"></activity>
+            android:parentActivityName=".Start" />
         <activity
             android:name=".ResetPassword"
-            android:parentActivityName=".Login"></activity>
+            android:parentActivityName=".Login" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +29,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Upload_image"></activity>
+        <activity android:name=".Upload_image" />
+        <activity android:name=".Chat"></activity>
     </application>
 
 </manifest>

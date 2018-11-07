@@ -85,8 +85,10 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         int id = item.getItemId();
         if (id == R.id.Upload_image) {
             startActivity(new Intent(Main.this, Upload_image.class));
-            finish();
-            return true;
+        }
+        else if(id==R.id.chat){
+            startActivity(new Intent(Main.this,Chat.class));
+
         }
         return false;
     }
