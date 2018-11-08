@@ -89,6 +89,8 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         else if(id==R.id.chat){
             startActivity(new Intent(Main.this,Chat.class));
 
+        }else if(id==R.id.galerey){
+            startActivity(new Intent(Main.this,Galerey.class));
         }
         return false;
     }

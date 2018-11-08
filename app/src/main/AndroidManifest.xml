@@ -30,7 +30,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Upload_image" />
-        <activity android:name=".Chat"></activity>
+        <activity android:name=".Chat" />
+        <activity android:name=".Galerey"></activity>
     </application>
 
 </manifest>

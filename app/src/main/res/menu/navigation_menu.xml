@@ -23,6 +23,11 @@
         android:id="@+id/chat"
         app:showAsAction="never">
     </item>
+    <item
+        android:title="@string/galerey"
+        android:id="@+id/galerey"
+        app:showAsAction="never">
+    </item>
 
 
 </menu>
