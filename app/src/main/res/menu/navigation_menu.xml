@@ -2,7 +2,7 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+<group>
     <item
         android:title="@string/change_name"
         android:id="@+id/change_name"
@@ -19,15 +19,18 @@
     app:showAsAction="never">
 </item>
     <item
-        android:title="@string/chat"
-        android:id="@+id/chat"
-        app:showAsAction="never">
-    </item>
-    <item
         android:title="@string/galerey"
         android:id="@+id/galerey"
         app:showAsAction="never">
     </item>
+
+</group>
+    <item
+        android:title="@string/chat"
+        android:id="@+id/chat"
+        app:showAsAction="never">
+    </item>
+
 
 
 </menu>
