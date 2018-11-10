@@ -8,28 +8,17 @@
     android:minWidth="@android:dimen/thumbnail_height"
     tools:context=".Start">
 
-    <Button
-        android:id="@+id/Register_on_start"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="14dp"
-        android:background="@android:color/darker_gray"
-        android:text="@string/Register_on_start"
-        android:textAllCaps="false"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp" />
-
     <TextView
         android:id="@+id/Already_have_account_on_start"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/primary_light"
         android:gravity="center_horizontal|center_vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/Register_on_start"
-        android:layout_centerHorizontal="true"
         android:text="@string/Already_have_account_on_start"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/Wellcom_on_start"
@@ -37,11 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="38dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/Wellcom_on_start"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_alignParentLeft="true" />
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

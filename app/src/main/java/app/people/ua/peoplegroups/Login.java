@@ -31,6 +31,7 @@ public class Login extends AppCompatActivity {
     TextView reset_pass;
     GoogleSignInClient mGoogleSignInClient;
     SignInButton googleButton;
+    TextView link_regis;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,7 @@ public class Login extends AppCompatActivity {
         Login_on_login = (Button)findViewById(R.id.Login_on_login);
         reset_pass = (TextView)findViewById(R.id.reset_pass);
         googleButton = (SignInButton) findViewById(R.id.google_button);
+        link_regis = (TextView)findViewById(R.id.link_regis);
 
         googleButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +57,14 @@ public class Login extends AppCompatActivity {
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this,gso);
+
+        link_regis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Login.this,Register.class));
+            }
+        });
+
         reset_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

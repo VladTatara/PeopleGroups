@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PeopleGroups</string>
     //StartActivity
-    <string name="Already_have_account_on_start">Уже есть свой аккаунт?</string>
+    <string name="Already_have_account_on_start">ВОЙТИ</string>
     <string name="Register_on_start">Зарегистрироваться</string>
     <string name="Wellcom_on_start">PeopleGroups</string>
     //RegisterActivity
@@ -11,7 +11,7 @@
     <string name="Password_on_register">Пароль</string>
     <string name="Register_on_register">Регистрация</string>
     //LoginActivity
-    <string name="Only_text_on_login">Войдите</string>
+    <string name="Only_text_on_login">Вход</string>
     <string name="Email_on_login">Почта</string>
     <string name="Password_on_login">Пароль</string>
     <string name="Login_on_login">Войти</string>
