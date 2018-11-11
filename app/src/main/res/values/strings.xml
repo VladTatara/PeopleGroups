@@ -23,7 +23,7 @@
     <string name="email_for_reset">Ваша почта</string>
     <string name="reset_but">Восстановить</string>
     //SplashActivity
-    <string name="Wellcom_on_splash">PEOPLE_GROUPS</string>
+    <string name="Wellcom_on_splash">PEOPLEGROUPS</string>
     //Navigation_menu
     <string name="Setup">Настройки</string>
     <string name="change_name">Изменить никнейм</string>
