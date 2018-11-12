@@ -33,7 +33,7 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_main);
+        NavigationView navigationView = findViewById(R.id.nav_main);
         navigationView.setNavigationItemSelectedListener(this);
 
         username_on_main = (TextView) findViewById(R.id.username_on_main);
