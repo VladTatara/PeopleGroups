@@ -25,7 +25,7 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
     TextView username_on_main;
 
     public Toolbar toolbar;
-    private NavigationView nav_main;
+    public NavigationView nav_main;
 
 
     @Override
@@ -92,6 +92,6 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         }else if(id==R.id.galerey){
             startActivity(new Intent(Main.this,Galerey.class));
         }
-        return false;
+        return true;
     }
 }
