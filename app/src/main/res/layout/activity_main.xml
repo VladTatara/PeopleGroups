@@ -16,10 +16,10 @@
         app:itemBackground="@color/cardview_light_background"
         app:itemIconTint="@color/accent"
         app:itemTextColor="@color/accent"
-        app:menu="@menu/navigation_menu">
-
+        app:menu="@menu/navigation_menu"
+        app:headerLayout="@layout/header"
+        android:fitsSystemWindows="true">
     </android.support.design.widget.NavigationView>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

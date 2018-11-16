@@ -2,33 +2,25 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    android:checkableBehavior="single">
     <item
         android:title="@string/change_name"
-        android:id="@+id/change_name"
-        app:showAsAction="never">
+        android:id="@+id/change_name">
     </item>
     <item
         android:title="@string/Setup"
-        android:id="@+id/Setup"
-        app:showAsAction="never">
+        android:id="@+id/Setup">
     </item>
     <item
     android:title="@string/Upload_image"
-    android:id="@+id/Upload_image"
-    app:showAsAction="never">
+    android:id="@+id/Upload_image">
 </item>
     <item
         android:title="@string/galerey"
-        android:id="@+id/galerey"
-        app:showAsAction="never">
+        android:id="@+id/galerey">
     </item>
     <item
         android:title="@string/chat"
-        android:id="@+id/chat"
-        app:showAsAction="never">
+        android:id="@+id/chat">
     </item>
-
-
-
 </menu>
