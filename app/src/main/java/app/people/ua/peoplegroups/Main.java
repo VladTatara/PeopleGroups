@@ -36,11 +36,10 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         NavigationView navigationView = findViewById(R.id.nav_main);
         navigationView.setNavigationItemSelectedListener(this);
 
-        username_on_main = (TextView) findViewById(R.id.username_on_main);
-        //Toolbar.
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        username_on_main = findViewById(R.id.username_on_main);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //Определяем по ID елементы.
+
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
@@ -78,10 +77,9 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
                 finish();
                 return true;
         }
-        return false;
+        return super.onOptionsItemSelected(item);
     }
-
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.Upload_image) {
             startActivity(new Intent(Main.this, Upload_image.class));
