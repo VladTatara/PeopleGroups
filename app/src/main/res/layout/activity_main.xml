@@ -5,9 +5,18 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="visible"
+    android:fitsSystemWindows="true"
     tools:context=".Main">
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/bar_layout">
+        </include>
+    </RelativeLayout>
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_main"
         android:layout_width="wrap_content"
@@ -20,20 +29,6 @@
         app:headerLayout="@layout/header"
         android:fitsSystemWindows="true">
     </android.support.design.widget.NavigationView>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="visible">
-
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/bar_layout">
-
-        </include>
-
-    </RelativeLayout>
-
 
 </android.support.v4.widget.DrawerLayout>
 
