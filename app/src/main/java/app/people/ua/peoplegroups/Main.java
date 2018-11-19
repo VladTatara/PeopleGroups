@@ -71,11 +71,8 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.Log_out:
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(Main.this, Start.class));
-                finish();
-                return true;
+
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -89,6 +86,11 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
 
         }else if(id==R.id.galerey){
             startActivity(new Intent(Main.this,Galerey.class));
+        }else if (id==R.id.Log_out){
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(Main.this, Start.class));
+            finish();
+            return true;
         }
         return true;
     }
