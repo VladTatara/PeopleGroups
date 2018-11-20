@@ -3,7 +3,10 @@ package app.people.ua.peoplegroups;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -20,6 +23,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Main extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    DrawerLayout drawerLayout;
+    ActionBarDrawerToggle actionBarDrawerToggle;
     FirebaseUser firebaseUser;
     DatabaseReference reference;
     TextView username_on_main;
@@ -32,6 +37,9 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.nav_open,R.string.nav_close);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
 
         NavigationView navigationView = findViewById(R.id.nav_main);
         navigationView.setNavigationItemSelectedListener(this);
@@ -59,6 +67,11 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         });
     }
 
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        actionBarDrawerToggle.syncState();
+    }
 
     //Метод для определения меню в верхнем левом углу Toolbar.
     @Override

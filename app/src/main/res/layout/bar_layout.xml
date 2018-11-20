@@ -9,16 +9,15 @@
     android:minHeight="40dp"
     android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
     app:popupTheme="@style/MenuStyle">
+
     <TextView
         android:id="@+id/username_on_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginStart="25dp"
-        android:gravity="center_horizontal"
         android:text="@string/username_on_main"
+        android:gravity="center_vertical|end"
         android:textColor="#fdfcfc"
-        android:textSize="18sp" />
+        android:textSize="15sp" />
 
 
 
