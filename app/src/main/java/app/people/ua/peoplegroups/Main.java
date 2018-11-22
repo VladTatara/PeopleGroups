@@ -38,8 +38,7 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         drawerLayout = findViewById(R.id.drawer_layout);
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.nav_open,R.string.nav_close);
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+
 
         NavigationView navigationView = findViewById(R.id.nav_main);
         navigationView.setNavigationItemSelectedListener(this);
@@ -47,6 +46,8 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         username_on_main = findViewById(R.id.username_on_main);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.nav_open,R.string.nav_close);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
 
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -57,7 +58,6 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 user_info user = dataSnapshot.getValue(user_info.class);
-
                 username_on_main.setText(user.getUsername());
             }
 
@@ -66,20 +66,17 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
             }
         });
     }
-
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         actionBarDrawerToggle.syncState();
     }
-
     //Метод для определения меню в верхнем левом углу Toolbar.
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.options_menu, menu);
         return true;
     }
-
     //Метод для обработки элементов меню.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
