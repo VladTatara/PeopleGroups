@@ -27,7 +27,8 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
     ActionBarDrawerToggle actionBarDrawerToggle;
     FirebaseUser firebaseUser;
     DatabaseReference reference;
-    TextView username_on_main;
+     public TextView username_on_main;
+
 
     public Toolbar toolbar;
     public NavigationView nav_main;
@@ -39,11 +40,10 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         setContentView(R.layout.activity_main);
         drawerLayout = findViewById(R.id.drawer_layout);
 
-
         NavigationView navigationView = findViewById(R.id.nav_main);
         navigationView.setNavigationItemSelectedListener(this);
 
-        username_on_main = findViewById(R.id.username_on_main);
+        username_on_main = (TextView)findViewById(R.id.username_on_main);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.nav_open,R.string.nav_close);
@@ -77,6 +77,7 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         getMenuInflater().inflate(R.menu.options_menu, menu);
         return true;
     }
+
     //Метод для обработки элементов меню.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

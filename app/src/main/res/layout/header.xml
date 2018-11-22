@@ -8,4 +8,13 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:orientation="vertical"
     android:gravity="bottom">
+
+    <TextView
+        android:id="@+id/username_on_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|end"
+        android:text="@string/username_on_main"
+        android:textColor="#fdfcfc"
+        android:textSize="15sp" />
 </RelativeLayout>
