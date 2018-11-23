@@ -43,7 +43,7 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         NavigationView navigationView = findViewById(R.id.nav_main);
         navigationView.setNavigationItemSelectedListener(this);
 
-        username_on_main = (TextView)findViewById(R.id.username_on_main);
+        username_on_main = (TextView)navigationView.getHeaderView(0).findViewById(R.id.username_on_main);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.nav_open,R.string.nav_close);
