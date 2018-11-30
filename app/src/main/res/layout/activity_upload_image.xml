@@ -4,6 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Upload_image">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/bar_layout">
+    </include>
 
    <Button
        android:layout_width="wrap_content"

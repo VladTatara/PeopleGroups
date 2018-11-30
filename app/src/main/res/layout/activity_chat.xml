@@ -7,10 +7,7 @@
     tools:context=".Chat">
     <include
         android:id="@+id/toolbar"
-        layout="@layout/bar_layout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:minHeight="40dp">
+        layout="@layout/bar_layout">
     </include>
 
 </RelativeLayout>
