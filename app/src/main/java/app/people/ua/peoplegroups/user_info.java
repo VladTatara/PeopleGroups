@@ -4,11 +4,13 @@ public class user_info {
     private String id;
     private String username_on_main;
     private String imageURL;
+    private String UserMail;
 
-    public user_info(String id, String username, String imageURL) {
+    private user_info(String id, String username, String imageURL, String userMail) {
         this.id = id;
         this.username_on_main = username;
         this.imageURL = imageURL;
+        this.UserMail = userMail;
     }
 
     public user_info() {
@@ -37,5 +39,13 @@ public class user_info {
 
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
+    }
+
+    public String getuserMail() {
+        return UserMail;
+    }
+
+    public void setuserMail(String userMail) {
+        this.UserMail = userMail;
     }
 }

@@ -28,8 +28,7 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
     FirebaseUser firebaseUser;
     DatabaseReference reference;
      public TextView username_on_main;
-
-
+     public  TextView UserMail;
     public Toolbar toolbar;
     public NavigationView nav_main;
 
@@ -44,6 +43,8 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         navigationView.setNavigationItemSelectedListener(this);
 
         username_on_main = (TextView)navigationView.getHeaderView(0).findViewById(R.id.username_on_main);
+        UserMail = (TextView)navigationView.getHeaderView(0).findViewById(R.id.UserMail);
+
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.nav_open,R.string.nav_close);
@@ -54,11 +55,14 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
 
 
+
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 user_info user = dataSnapshot.getValue(user_info.class);
                 username_on_main.setText(user.getUsername());
+                UserMail.setText(user.getuserMail());
+
             }
 
             @Override
@@ -97,6 +101,7 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
 
         }else if(id==R.id.galerey){
             startActivity(new Intent(Main.this,Galerey.class));
+
         }else if (id==R.id.Log_out){
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(Main.this, Start.class));
