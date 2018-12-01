@@ -32,6 +32,13 @@ public class user_info {
     public void setUsername(String username) {
         this.username_on_main = username;
     }
+    public String getuserMail() {
+        return UserMail;
+    }
+
+    public void setuserMail(String userMail) {
+        this.UserMail = userMail;
+    }
 
     public String getImageURL() {
         return imageURL;
@@ -41,11 +48,5 @@ public class user_info {
         this.imageURL = imageURL;
     }
 
-    public String getuserMail() {
-        return UserMail;
-    }
 
-    public void setuserMail(String userMail) {
-        this.UserMail = userMail;
-    }
 }
