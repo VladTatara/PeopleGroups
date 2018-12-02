@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="69dp"
+        android:layout_marginBottom="58dp"
         android:gravity="center_vertical|end"
         android:text="@string/username_on_main"
         android:textColor="#fdfcfc"

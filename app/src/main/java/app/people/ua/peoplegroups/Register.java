@@ -56,7 +56,7 @@ public class Register extends AppCompatActivity {
             }
         });
     }
-    private void Registered_New_User (final String User_name_on_register, String Email_on_register, String Password_on_register){
+    private void Registered_New_User (final String User_name_on_register, final String Email_on_register, String Password_on_register){
         Auth.createUserWithEmailAndPassword(Email_on_register,Password_on_register)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -72,6 +72,7 @@ public class Register extends AppCompatActivity {
                             hashMap.put("id",userid);
                             hashMap.put("username",User_name_on_register);
                             hashMap.put("imageURL","default");
+                            hashMap.put("userMail",Email_on_register);
 
                             reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

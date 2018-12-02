@@ -5,8 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 public class Galerey extends AppCompatActivity {
     public Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,10 @@ public class Galerey extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference rootRef = storage.getReference();
+        StorageReference myRef = rootRef.child("images/myimagedirectory");
     }
 
     }

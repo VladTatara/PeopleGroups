@@ -11,12 +11,11 @@
         android:id="@+id/Wellcom_on_splash"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="72dp"
+        android:layout_centerVertical="true"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/Wellcom_on_splash"
-        android:textColor="@color/divider"
+        android:textColor="@color/accent"
         android:textSize="30sp"
         android:textStyle="bold" />
 </RelativeLayout>
