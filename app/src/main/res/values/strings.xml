@@ -20,6 +20,7 @@
     <string name="Text_on_main">Добро пожаловать!</string>
     <string name="username_on_main">Никнейм</string>
     <string name="UserMail">Почта</string>
+    <string name="imageProfile">Фото профиля</string>
     //ResetPasswordActivity
     <string name="email_for_reset">Ваша почта</string>
     <string name="reset_but">Восстановить</string>
@@ -39,8 +40,9 @@
     <string name="choice_image">Выберете файл</string>
     <string name="enter_name_file">Введите название</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    //Fragments
+    <string name="chat_fragmet">Добро пожаловать</string>
+
 
 
 </resources>

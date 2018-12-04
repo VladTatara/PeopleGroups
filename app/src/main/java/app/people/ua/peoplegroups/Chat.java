@@ -26,6 +26,7 @@ public class Chat extends AppCompatActivity {
 
         viewPaperAdapter.addFragment(new ChatFragments(),"Чат" );
         viewPaperAdapter.addFragment(new UsersFragment(),"Участники" );
+        viewPaperAdapter.addFragment(new ProfileFragment(),"Профиль" );
 
         viewPager.setAdapter(viewPaperAdapter);
 
