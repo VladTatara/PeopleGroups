@@ -10,19 +10,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.google.firebase.auth.UserInfo;
 
 import java.util.List;
 
 import app.people.ua.peoplegroups.R;
+import app.people.ua.peoplegroups.user_info;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     private Context vContext;
-    private List<UserInfo> vUsers;
+    private List<user_info> vuser_info;
 
-    public UserAdapter (Context vContext, List<UserInfo> vUsers){
-        this.vUsers = vUsers;
+    public UserAdapter (Context vContext, List<user_info> vuser_info){
+        this.vuser_info = vuser_info;
         this.vContext = vContext;
     }
 
@@ -35,26 +35,27 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        UserInfo user = vUsers.get(position);
-        holder.username_on_main.setText(user.getDisplayName());
-        if (user.getPhotoUrl().equals("default")){
+        user_info user_info = vuser_info.get(position);
+        holder.username_on_main.setText(user_info.getUsername());
+
+        if (user_info.getImageURL().equals("default")){
             holder.imageProfile.setImageResource(R.drawable.iconmain);
         }
 else {
-            Glide.with(vContext).load(user.getPhotoUrl()).into(holder.imageProfile);
+            Glide.with(vContext).load(user_info.getImageURL()).into(holder.imageProfile);
         }
     }
 
     @Override
     public int getItemCount() {
-        return vUsers.size();
+        return vuser_info.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView username_on_main;
         public ImageView imageProfile;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             username_on_main = itemView.findViewById(R.id.username_on_main);
             imageProfile = itemView.findViewById(R.id.imageProfile);
