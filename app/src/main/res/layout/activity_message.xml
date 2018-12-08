@@ -26,7 +26,6 @@
         android:layout_below="@id/imageProfile"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:text="@string/username_on_main"
         android:textColor="@color/primary_dark" />
 
 
