@@ -3,21 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/RelLay2"
+    android:background="@color/primary_light"
     tools:context=".MessageActivity">
+
     <include
         android:id="@+id/toolbar"
         layout="@layout/bar_layout">
     </include>
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/toolbar"
         android:id="@+id/imageProfile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/iconmain"/>
+        android:layout_marginTop="66dp"
+        android:src="@drawable/iconmain" />
 
     <TextView
         android:id="@+id/username_on_main"
@@ -28,5 +31,43 @@
         android:layout_marginTop="15dp"
         android:textColor="@color/primary_dark" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="387dp"
+        android:id="@+id/RelLay2"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/username_on_main"
+        tools:context=".MessageActivity">
 
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler_view">
+        </android.support.v7.widget.RecyclerView>
+
+        <EditText
+            android:id="@+id/field_for_send_text"
+            android:layout_width="256dp"
+            android:layout_height="74dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/primary_light"
+            android:hint="Введите текст"
+            android:inputType="text"
+            android:paddingLeft="5dp" />
+
+        <ImageButton
+            android:id="@+id/but_send"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="13dp"
+            android:layout_marginEnd="17dp"
+            android:background="@drawable/ic_action_send"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp" />
+
+    </RelativeLayout>
 </RelativeLayout>
