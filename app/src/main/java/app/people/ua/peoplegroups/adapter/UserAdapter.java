@@ -1,6 +1,7 @@
 package app.people.ua.peoplegroups.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import app.people.ua.peoplegroups.MessageActivity;
 import app.people.ua.peoplegroups.R;
 import app.people.ua.peoplegroups.user_info;
 
@@ -35,7 +37,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        user_info user_info = vuser_info.get(position);
+        final user_info user_info = vuser_info.get(position);
         holder.username_on_main.setText(user_info.getUsername());
 
         if (user_info.getImageURL().equals("default")){
@@ -44,6 +46,16 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 else {
             Glide.with(vContext).load(user_info.getImageURL()).into(holder.imageProfile);
         }
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(vContext, MessageActivity.class);
+                intent.putExtra("userid",user_info.getId());
+                vContext.startActivity(intent);
+
+            }
+        });
     }
 
     @Override

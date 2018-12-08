@@ -63,6 +63,7 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
                 username_on_main.setText(user.getUsername());
                 UserMail.setText(user.getuserMail());
 
+
             }
 
             @Override

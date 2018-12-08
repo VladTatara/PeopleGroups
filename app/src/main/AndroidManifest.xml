@@ -33,9 +33,8 @@
         </activity>
         <activity android:name=".Upload_image" />
         <activity android:name=".Chat" />
-        <activity android:name=".Galerey">
-
-        </activity>
+        <activity android:name=".Galerey"></activity>
+        <activity android:name=".MessageActivity"></activity>
     </application>
 
 </manifest>
