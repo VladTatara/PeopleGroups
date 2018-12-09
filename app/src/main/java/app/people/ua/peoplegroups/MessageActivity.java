@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
@@ -20,14 +22,21 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
+import app.people.ua.peoplegroups.adapter.MessageAdapter;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MessageActivity extends AppCompatActivity {
 
     CircleImageView imageProfile;
     TextView username_on_main;
+    MessageAdapter messageAdapter;
+    List<ChatPerson> vchat;
+
+    RecyclerView recyclerView;
 
     FirebaseUser fuser;
     DatabaseReference reference;
@@ -51,6 +60,15 @@ public class MessageActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+
+
         imageProfile = findViewById(R.id.imageProfile);
         username_on_main = findViewById(R.id.username_on_main);
         but_send = findViewById(R.id.but_send);
@@ -85,6 +103,7 @@ public class MessageActivity extends AppCompatActivity {
                     Glide.with(MessageActivity.this).load(user.getImageURL()).into(imageProfile);
                 }
                 field_for_send_text.setText("");
+                readMessages(fuser.getUid(), userid, user.getImageURL());
 
             }
 
@@ -101,7 +120,32 @@ public class MessageActivity extends AppCompatActivity {
         hashMap.put("sender", sender);
         hashMap.put("recever", receiver);
         hashMap.put("message", message);
+
         reference.child("Chats").push().setValue(hashMap);
 
+    }
+    private void readMessages(final String myid, final String userid, final String imageurl){
+        vchat = new ArrayList<>();
+        reference = FirebaseDatabase.getInstance().getReference("ChatsPrivate");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                vchat.clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    ChatPerson chatPerson = snapshot.getValue(ChatPerson.class);
+                    if (chatPerson.getReceiver().equals(myid) && chatPerson.getSender().equals(userid) ||
+                            chatPerson.getReceiver().equals(userid)&& chatPerson.getSender().equals(myid)){
+                     vchat.add(chatPerson);
+                    }
+                   messageAdapter = new MessageAdapter(MessageActivity.this,vchat,imageurl);
+        recyclerView.setAdapter(messageAdapter);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 }
