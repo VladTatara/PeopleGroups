@@ -4,70 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_below="@+id/RelLay2"
     android:background="@color/primary_light"
     tools:context=".MessageActivity">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/bar_layout">
-    </include>
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageProfile"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp"
-        android:src="@drawable/iconmain" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_dark"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/MenuStyle">
 
-    <TextView
-        android:id="@+id/username_on_main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imageProfile"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:textColor="@color/primary_dark" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageProfile"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/username_on_main"
+                android:textSize="18sp"
+                android:layout_marginLeft="25dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginStart="25dp" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        android:layout_below="@id/bar_layout"
+        android:layout_above="@id/bottom"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="387dp"
-        android:id="@+id/RelLay2"
+        android:padding="5dp"
+        android:id="@+id/bottom"
+        android:background="#fff"
         android:layout_alignParentBottom="true"
-        android:layout_below="@+id/username_on_main"
-        tools:context=".MessageActivity">
-
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/recycler_view">
-        </android.support.v7.widget.RecyclerView>
+        android:layout_height="wrap_content">
 
         <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/field_for_send_text"
-            android:layout_width="256dp"
-            android:layout_height="74dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:background="@color/primary_light"
-            android:hint="Введите текст"
-            android:inputType="text"
-            android:paddingLeft="5dp" />
+            android:background="@android:color/transparent"
+            android:hint="Введите сообщение"
+            android:layout_toLeftOf="@id/but_send"
+            android:layout_centerVertical="true"/>
 
         <ImageButton
-            android:id="@+id/but_send"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="13dp"
-            android:layout_marginEnd="17dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/ic_action_send"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="17dp" />
+            android:id="@+id/but_send"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
 
     </RelativeLayout>
 </RelativeLayout>
