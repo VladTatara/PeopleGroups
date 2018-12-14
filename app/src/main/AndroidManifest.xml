@@ -13,10 +13,9 @@
         android:roundIcon="@drawable/icons_app"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Start" />
         <activity
             android:name=".Register"
-            android:parentActivityName=".Start" />
+            android:parentActivityName=".Start" />'
         <activity android:name=".Main" />
         <activity
             android:name=".Login"

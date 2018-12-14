@@ -24,7 +24,7 @@ public class Chat extends AppCompatActivity {
         ViewPager viewPager = findViewById(R.id.view_paper);
         ViewPaperAdapter viewPaperAdapter = new ViewPaperAdapter(getSupportFragmentManager());
 
-        viewPaperAdapter.addFragment(new ChatFragments(),"Чат" );
+        viewPaperAdapter.addFragment(new ChatFragments(),"Общий чат" );
         viewPaperAdapter.addFragment(new UsersFragment(),"Участники" );
         viewPaperAdapter.addFragment(new ProfileFragment(),"Профиль" );
 

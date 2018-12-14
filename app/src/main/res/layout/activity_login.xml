@@ -4,38 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary_light"
     tools:context=".Login">
 
     <TextView
         android:id="@+id/Only_text_on_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/google_button"
+        android:gravity="center_horizontal|center_vertical"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="11dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:text="@string/Only_text_on_login"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_alignRight="@+id/google_button" />
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/Email_on_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="81dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:ems="10"
         android:gravity="center_vertical|center_horizontal"
         android:hint="@string/Email_on_login"
         android:inputType="textEmailAddress"
         android:textColor="@color/primary_dark"
-        android:layout_alignParentLeft="true" />
+         />
 
     <EditText
         android:id="@+id/Password_on_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/Email_on_login"
         android:ems="10"
@@ -49,6 +56,8 @@
         android:id="@+id/Login_on_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="186dp"
@@ -61,61 +70,38 @@
 
     <TextView
         android:id="@+id/reset_pass"
-        android:layout_width="142dp"
+        android:layout_width="118dp"
         android:layout_height="32dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="234dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/Login_on_login"
         android:gravity="left|center_vertical"
         android:text="@string/reset_pass"
         android:textColor="@color/accent"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_alignParentLeft="true" />
+        android:textSize="14sp" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/google_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="208dp"
-        android:layout_alignParentLeft="true">
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textStyle="bold">
 
     </com.google.android.gms.common.SignInButton>
 
     <TextView
-        android:layout_width="172dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/link_regis"
-        android:gravity="center_horizontal"
-        android:text="Ещё нет аккаунта?"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
         android:id="@+id/link_regis"
-        android:layout_width="185dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="58dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="67dp"
         android:gravity="center_horizontal"
         android:text="Зарегистрируйтесь!"
         android:textColor="@color/accent"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView4"
-
-        android:layout_width="match_parent"
-        android:layout_height="33dp"
-        android:layout_above="@+id/google_button"
-        android:layout_alignParentStart="true"
-        android:gravity="left"
-        android:text="Или войдите с помощью других сервисов"
         android:textSize="16sp"
         android:textStyle="bold" />
 

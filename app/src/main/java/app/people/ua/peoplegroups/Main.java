@@ -39,6 +39,7 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         setContentView(R.layout.activity_main);
         drawerLayout = findViewById(R.id.drawer_layout);
 
+
         NavigationView navigationView = findViewById(R.id.nav_main);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -105,7 +106,7 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
 
         }else if (id==R.id.Log_out){
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(Main.this, Start.class));
+            startActivity(new Intent(Main.this, Login.class));
             finish();
             return true;
         }

@@ -80,7 +80,7 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String msg = field_for_send_text.getText().toString();
-                if (!msg.equals("")){
+                if (msg.equals("")){
                    sendMassage(fuser.getUid(),userid ,msg );
                 }
                 else {
