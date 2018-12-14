@@ -71,7 +71,7 @@ public class MessageActivity extends AppCompatActivity {
 
         imageProfile = findViewById(R.id.imageProfile);
         username_on_main = findViewById(R.id.username_on_main);
-        but_send = findViewById(R.id.but_send);
+        but_send = (ImageButton)findViewById(R.id.but_send);
         field_for_send_text = findViewById(R.id.field_for_send_text);
         intent = getIntent();
         final String userid = intent.getStringExtra("userid");

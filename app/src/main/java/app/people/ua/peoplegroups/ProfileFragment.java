@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.webkit.MimeTypeMap;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -41,7 +40,6 @@ public class ProfileFragment extends Fragment {
 
     CircleImageView imageProfile;
     TextView username_on_main;
-
     DatabaseReference reference;
     FirebaseUser Puser;
 
