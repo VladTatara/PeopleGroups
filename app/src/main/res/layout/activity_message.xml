@@ -55,13 +55,15 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/field_for_send_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/field_for_send_text"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/but_send"
             android:background="@android:color/transparent"
             android:hint="Введите сообщение"
-            android:layout_toLeftOf="@id/but_send"
-            android:layout_centerVertical="true"/>
+            android:inputType="text"
+            android:layout_toStartOf="@id/but_send" />
 
         <ImageButton
             android:layout_width="40dp"

@@ -2,30 +2,33 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:padding="8dp"
+    android:padding="15dp"
     android:layout_height="wrap_content">
-    
+
     <RelativeLayout
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
         android:layout_alignParentEnd="true"
-        android:layout_height="wrap_content"
         android:layout_alignParentRight="true">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="43dp"
-            android:layout_height="29dp"
-            android:layout_alignBottom="@+id/show_message"
-            android:layout_toStartOf="@+id/show_message" />@+id/imageProfile"/>
+            android:id="@+id/imageProfile"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="92dp" />
+
         <TextView
+            android:id="@+id/show_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:id="@+id/show_message"
+            android:layout_alignParentRight="true"
             android:background="@drawable/background_right"
-            android:text="Привет"
-            android:textSize="18dp"
             android:padding="8dp"
-            android:layout_alignParentRight="true" />
+            android:text="Привет"
+            android:textSize="18dp" />
 
     </RelativeLayout>
 
