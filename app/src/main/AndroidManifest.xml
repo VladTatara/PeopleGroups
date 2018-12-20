@@ -15,25 +15,34 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Register"
-            android:parentActivityName=".Start" />'
-        <activity android:name=".Main" />
+            android:parentActivityName=".Login" />
+        <activity android:name=".Main">
+
+        </activity>
+
         <activity
             android:name=".Login"
-            android:parentActivityName=".Start" />
+            android:parentActivityName=".Register" />
         <activity
             android:name=".ResetPassword"
             android:parentActivityName=".Login" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW"/>
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".Upload_image" />
-        <activity android:name=".Chat" />
-        <activity android:name=".Galerey"></activity>
-        <activity android:name=".MessageActivity"></activity>
+        <activity android:name=".Chat"/>
+        <activity android:name=".Galerey">
+
+        </activity>
+        <activity android:name=".MessageActivity">
+
+        </activity>
     </application>
 
 </manifest>
